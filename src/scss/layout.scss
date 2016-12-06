@@ -23,11 +23,10 @@
 header {
 	position: fixed;
 	left: 0;
-	top: 30px;
+	top: 0;
 	width: 100%;
 	z-index: 100;
 	text-align: right;
-	background: $bg;
 	opacity: 1;
 	visibility: visible;
 	@include transition(all 0.6s ease 0s);
@@ -67,7 +66,7 @@ header {
 		}
 	}
 	@media (max-width: 840px) {
-		top: 15px;
+		top: 0;
 	}
 	.head-top {
 		padding: 30px 65px 15px 65px;
@@ -123,6 +122,7 @@ header {
 					vertical-align: top;
 					@include transition(color 0.3s ease 0s);
 					a {
+						font-weight: 400;
 						display: block;
 						margin-top: 12px;
 						&.btn {
@@ -131,6 +131,7 @@ header {
 					}
 					&.active {
 						a {
+							font-weight: 500;
 							color: $active-color;
 						}
 						.btn {
@@ -148,7 +149,7 @@ header {
 /* 2. Section */
 .section {
 	position: relative;
-	padding: 0 80px 150px 80px;
+	padding: 90px 80px 150px 80px;
 	z-index: 97;
 	opacity: 1;
 	visibility: visible;
@@ -716,17 +717,16 @@ header {
 /* 12. Footer */
 footer {
 	position: fixed;
-	bottom: 25px;
+	bottom: 0;
 	left: 0;
 	padding: 15px 60px 30px 60px;
 	width: 100%;
-	background: $bg;
 	z-index: 100;
 	opacity: 1;
 	visibility: visible;
 	@include transition(all 0.6s ease 0s);
 	@media (max-width: 840px) {
-		bottom: 15px;
+		bottom: 0;
 	}
 	.soc {
 		float: right;

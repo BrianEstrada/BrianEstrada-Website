@@ -6851,6 +6851,7 @@ $(function () {
     /* Set full height in blocks */
     var width = $(window).width();
     var height = $(window).height();
+
     $('.section.started').css({'height': height - 60});
 
     /* Typed preload text */
@@ -7019,70 +7020,26 @@ $(function () {
         $('.section.started').css({'height': height - 30});
     }
 
-    /* Navigation Menu */
 
-    $('header, .typed-bread').on('click', 'a', function () {
-        var link = $(this).attr('href');
+    var sections = $('section')
+        , nav = $('.top-menu')
+        , nav_height = nav.outerHeight();
 
+    $(window).on('scroll', function () {
+        var cur_pos = $(this).scrollTop();
 
-        return false;
-    });
+        sections.each(function() {
+            var top = $(this).offset().top - nav_height,
+                bottom = top + $(this).outerHeight();
 
+            if (cur_pos >= top && cur_pos <= bottom) {
+                nav.find('li').removeClass('active');
+                sections.removeClass('active');
 
-    $('.nav').click(function () {
-        var home = $('#home');
-        var resume = $('#resume');
-        var portfolio = $('#portfolio');
-        var contact = $('#contact');
+                $(this).addClass('active');
 
-        var data = $(this).data('target');
-
-
-        $(".preloader").show();
-        $(".pre-inner").show();
-
-        resume.fadeOut();
-        portfolio.fadeOut();
-        contact.fadeOut();
-        home.fadeOut();
-
-
-        $(".preloader .pre-inner").fadeOut(800, function () {
-
-
-
-
-            switch (data) {
-                case 'home':
-                    home.fadeIn();
-
-                    break;
-                case 'resume':
-                    resume.fadeIn();
-                    break;
-                case 'portfolio':
-                    portfolio.fadeIn();
-
-                    var $container = $('.box-items');
-
-                    $container.imagesLoaded(function () {
-                        $container.multipleFilterMasonry({
-                            itemSelector: '.box-item',
-                            filtersGroupSelector: '.filters',
-                            percentPosition: true,
-                            gutter: 0
-                        });
-                    });
-
-                    break;
-                case 'contact':
-                    contact.fadeIn();
-                    break;
-                default:
-                    console.log('Bad value!');
+                nav.find('a[href="#'+$(this).attr('id')+'"]').parent().addClass('active');
             }
-
-            $('.preloader').fadeOut();
         });
     });
 });

@@ -54,10 +54,10 @@
             <a href="#" class="menu-btn"><span></span></a>
             <div class="top-menu">
                 <ul>
-                    <li class="active"><a href="#" data-target="home" class="lnk nav">Home</a></li>
-                    <li><a href="#" data-target="resume" class="lnk nav">Resume</a></li>
-                    <li><a href="#" data-target="portfolio" class="lnk nav">Portfolio</a></li>
-                    <li><a href="#" data-target="contact" class="btn nav">Contact</a></li>
+                    <li><a href="#home" class="lnk">Home</a></li>
+                    <li><a href="#resume" class="lnk">Resume</a></li>
+                    <li><a href="#portfolio" class="lnk">Portfolio</a></li>
+                    <li><a href="#contact" class="btn">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -65,7 +65,7 @@
 
     <!-- Wrapper -->
     <div class="wrapper">
-        <div id="home">
+        <section id="home">
             <!-- Started -->
             <div class="section started">
                 <div class="centrize full-width">
@@ -80,29 +80,13 @@
                             </div>
                             <span class="typed-subtitle"></span>
                         </div>
+                        <a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="resume">
-            <!-- Started -->
-            <div class="section started">
-                <div class="centrize full-width">
-                    <div class="vertical-center">
-                        <div class="started-content">
-                            <div class="h-title">Resume</div>
-                            <div class="h-subtitle typing-bread typing-resume">
-                                <p><a href="#" data-target="home" class="nav">Home</a> / <a href="#"
-                                                                                            data-target="resume"
-                                                                                            class="nav">Resume</a></p>
-                            </div>
-                            <span class="typed-bread"></span>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
-            </div>
+        <section id="resume">
 
             <!-- About -->
             <div class="section about">
@@ -266,25 +250,9 @@
                 </div>
             </div>
 
-        </div>
+        </section>
 
-        <div id="portfolio">
-            <!-- Started -->
-            <div class="section started">
-                <div class="centrize full-width">
-                    <div class="vertical-center">
-                        <div class="started-content">
-                            <div class="h-title glitch-effect" data-text="Portfolio">Portfolio</div>
-                            <div class="h-subtitle typing-bread">
-                                <p><a href="index.html">Home</a> / <a href="portfolio.html">Portfolio</a></p>
-                            </div>
-                            <span class="typed-bread"></span>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
-            </div>
-
+        <section id="portfolio">
             <!-- Works -->
             <div class="section works">
                 <div class="content">
@@ -341,43 +309,6 @@
                             </div>
                         </div>
 
-                        <div class="box-item f-mobile">
-                            <div class="image">
-                                <a href="#popup-2" class="has-popup">
-                                    <img src="images/works/work2.jpg" alt=""/>
-                                    <span class="info">
-										<span class="centrize full-width">
-											<span class="vertical-center">
-												<span class="ion ion-ios-plus-empty"></span>
-											</span>
-										</span>
-									</span>
-                                </a>
-                            </div>
-                            <div class="desc">
-                                <div class="category">Photography</div>
-                                <a href="#popup-2" class="name has-popup">Coffee Cup In Hand</a>
-                            </div>
-                            <div id="popup-2" class="popup-box mfp-fade mfp-hide">
-                                <div class="content">
-                                    <div class="image">
-                                        <img src="images/works/work2.jpg" alt="">
-                                    </div>
-                                    <div class="desc">
-                                        <div class="category">Photography</div>
-                                        <h4>Coffee Cup In Hand</h4>
-                                        <p>
-                                            Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu
-                                            volumus explicari sed. Mel mutat vituperata
-                                            suscipiantur et, et fabellas explicari adipiscing quo, no mucius euismod
-                                            vis. Cu vim quem quod cibo.
-                                        </p>
-                                        <a href="#" class="btn" data-text="View Project">View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="box-item f-website">
                             <div class="image">
                                 <a href="#popup-3" class="has-popup">
@@ -421,28 +352,9 @@
                     <div class="clear"></div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="contact">
-
-            <!-- Started -->
-            <div class="section started">
-                <div class="centrize full-width">
-                    <div class="vertical-center">
-                        <div class="started-content">
-                            <div class="h-title">Contact</div>
-                            <div class="h-subtitle">
-                                <p><a href="#" data-target="home" class="nav">Home</a> / <a href="#"
-                                                                                            data-target="contact"
-                                                                                            class="nav">Contact</a></p>
-                            </div>
-                            <span class="typed-bread"></span>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
-            </div>
-
+        <section id="contact">
             <!-- Contacts Info -->
             <div class="section contacts">
                 <div class="content">
@@ -487,7 +399,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 
     <!-- Footer -->
@@ -504,12 +416,6 @@
         <div class="copy">© 2016 Brian Estrada. All rights reserved.</div>
         <div class="clr"></div>
     </footer>
-
-    <!-- Lines -->
-    <div class="line top"></div>
-    <div class="line bottom"></div>
-    <div class="line left"></div>
-    <div class="line right"></div>
 
 </div>
 
