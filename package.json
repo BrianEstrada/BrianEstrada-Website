@@ -1,0 +1,33 @@
+{
+  "name": "BrianEstradaPortfolio",
+  "title": "A Portfolio Site",
+  "author": "Brian Estrada",
+  "url": "Brianestrada.com",
+  "version": "1.0.5",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/BrianEstrada/BrianEstradaWebsite.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-amd-optimizer": "^0.5.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-header": "^1.7.1",
+    "gulp-jshint": "^2.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-uglify": "^1.5.1",
+    "gulp-uncss": "^1.0.6",
+    "gulp-webpack": "^1.5.0",
+    "jshint": "^2.8.0"
+  },
+  "dependencies": {
+    "ionicons": "^3.0.0",
+    "vue": "^2.1.0"
+  }
+}
