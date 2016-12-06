@@ -1,8 +1,10 @@
 var gulp = require('gulp'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    htmlmin = require('gulp-htmlmin'),
     sass = require('gulp-sass'),
     uncss = require('gulp-uncss'),
     webpack = require('gulp-webpack'),
+    imagemin = require('gulp-imagemin'),
     browserSync = require('browser-sync'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
@@ -77,12 +79,25 @@ gulp.task('browser-sync', function () {
         }
     });
 });
+
+gulp.task('images', function() {
+    return gulp.src('src/images/*/**')
+        .pipe(imagemin())
+        .pipe(gulp.dest('app/images'))
+});
+
+gulp.task('html', function() {
+    return gulp.src('src/*.html')
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('app'));
+});
+
 gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-gulp.task('default', ['css', 'js', 'browser-sync'], function () {
+gulp.task('default', ['css', 'js', 'html', 'images','browser-sync'], function () {
     gulp.watch("src/scss/**/*.scss", ['css']);
     gulp.watch("src/js/*.js", ['js']);
-    gulp.watch("app/*.html", ['bs-reload']);
+    gulp.watch("src/*.html", ['bs-reload']);
 });
