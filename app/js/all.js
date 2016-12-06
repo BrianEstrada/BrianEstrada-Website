@@ -6877,6 +6877,8 @@ $(function () {
         });
     });
 
+
+
     /*Menu mobile*/
     $('header').on('click', '.menu-btn', function () {
         if ($('header').hasClass('active')) {
@@ -7019,6 +7021,12 @@ $(function () {
     if (width < 840) {
         $('.section.started').css({'height': height - 30});
     }
+
+
+    $(".top-menu").find('a').click(function () {
+        $('header').removeClass('active');
+        $('body').addClass('loaded');
+    });
 
 
     var sections = $('section')
