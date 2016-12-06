@@ -6770,7 +6770,7 @@ header {
       width: 45%; } }
   @media (max-width: 580px) {
     .items .item {
-      width: 100%;
+      width: 50%;
       margin-right: 0; } }
   @media (max-width: 400px) {
     .items .item {
@@ -7103,3 +7103,6 @@ footer {
   color: #FFF;
   font-size: 24px;
   font-family: "Verdana" !important; }
+
+#resume {
+  padding-top: 20px; }

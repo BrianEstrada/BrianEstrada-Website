@@ -60,7 +60,8 @@ gulp.task('js', function () {
         'src/js/masonry.pkgd.js',
         'src/js/masonry-filter.js',
         'src/js/imagesloaded.pkgd.js',
-        'src/js/glitche-scripts.js'
+        'src/js/glitche-scripts.js',
+        'src/js/smoothscroll.js'
     ])
         .pipe(concat('all.js'))
         .pipe(header(banner, {package: package}))
