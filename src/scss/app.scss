@@ -7,3 +7,10 @@
 #resume{
   padding-top: 20px;
 }
+
+.resume-item{
+  li{
+    list-style: square outside none;
+    margin-top: 10px;
+  }
+}

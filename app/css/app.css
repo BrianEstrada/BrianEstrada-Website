@@ -6706,7 +6706,13 @@ header {
       top: 9px;
       background: #303f9f; }
   .resume-items .resume-item .name {
-    font-weight: 500;
+    font-weight: 900;
+    font-size: 20px;
+    color: #141414;
+    margin: 0 0 5px 0; }
+  .resume-items .resume-item .school {
+    font-weight: 400;
+    font-size: 12px;
     color: #141414;
     margin: 0 0 15px 0; }
   .resume-items .resume-item p {
@@ -7108,3 +7114,7 @@ footer {
 
 #resume {
   padding-top: 20px; }
+
+.resume-item li {
+  list-style: square outside none;
+  margin-top: 10px; }
