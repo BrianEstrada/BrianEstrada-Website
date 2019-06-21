@@ -51,7 +51,7 @@ gulp.task('css', function () {
         .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('js', function () {
+gulp.task('js', function (done) {
     gulp.src([
         'src/js/jquery.min.js',
         'src/js/jquery.validate.js',
@@ -71,6 +71,8 @@ gulp.task('js', function () {
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('app/js'))
         .pipe(browserSync.reload({stream: true, once: true}));
+
+    done();
 });
 
 gulp.task('browser-sync', function () {
@@ -97,9 +99,10 @@ gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-gulp.task('default', ['css', 'js', 'html', 'images', 'browser-sync'], function () {
+gulp.task('default', gulp.series(['css', 'js', 'html', 'images', 'browser-sync'], function (done) {
     gulp.watch("src/images/*/**", ['images']);
     gulp.watch("src/scss/**/*.scss", ['css']);
     gulp.watch("src/js/*.js", ['js']);
     gulp.watch("src/*.html", ['html', 'bs-reload']);
-});
+    done();
+}));
