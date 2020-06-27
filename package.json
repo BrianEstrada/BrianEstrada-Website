@@ -1,31 +1,16 @@
 {
-  "name": "BrianEstradaPortfolio",
-  "title": "A Portfolio Site",
-  "author": "Brian Estrada",
-  "url": "Brianestrada.com",
-  "version": "1.0.5",
+  "name": "BrianEstrada-Website",
+  "version": "1.0.0",
+  "description": "Brian Estrada Website",
+  "main": "index.js",
+  "repository": "git@github.com:BrianEstrada/BrianEstrada-Website.git",
+  "author": "Brian Estrada <lovesguitar@gmail.com>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/BrianEstrada/BrianEstradaWebsite.git"
-  },
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "gulp": "^4.0.2",
-    "gulp-amd-optimizer": "^0.6.0",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.3",
-    "gulp-header": "^1.8.12",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^6.0.0",
-    "gulp-jshint": "^2.1.0",
-    "gulp-less": "^4.0.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^1.5.4",
-    "gulp-uncss": "^1.0.6",
-    "gulp-webpack": "^1.5.0",
-    "jshint": "^2.10.2"
+    "vuepress": "^1.5.1"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   }
 }
